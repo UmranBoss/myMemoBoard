@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'Red Hat Display', sans-serif;
+	text-align: center;
+	background-color: #f0f0f0;
+	color: #333;
+	margin: 0;
+	height: 100%;
+}
+
+html {
+	height: 100%;
+}
+
+header {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+header h1 {
+	font-family: 'Limelight', sans-serif;
+	font-size: 2.5em;
+}
+
+header p {
+	font-size: 1.2em;
+	font-weight: lighter;
+	font-style: italic;
+	margin: 0;
+}
+
+.container {
+	width: 90%;
+	max-width: 900px;
+	margin: 50px auto;
+	background: white;
+	padding: 25px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: left;
+}
+
+h1 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	margin-top: 10px;
+	text-align: left;
+}
+
+.form-row {
+	display: flex;
+	justify-content: space-between;
+	gap: 15px;
+	margin-bottom: 20px;
+	flex-wrap: wrap;
+}
+
+.form-row div {
+	flex: 1;
+	min-width: 200px;
+}
+
+input[type="text"], input[type="date"], select, textarea {
+	width: 100%;
+	padding: 10px;
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+
+textarea {
+	height: 160px;
+	resize: vertical;
+}
+
+input[type="submit"], .backbutton {
+	width: 100%;
+	padding: 12px;
+	background-color: #33cccc;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1em;
+	transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, .backbutton:hover {
+	background-color: #6fdcdc;
+}
+
+.backbutton {
+	text-decoration: none;
+	color: black;
+	margin-top: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	background-color: transparent;
+	border: none;
+}
+
+.backbutton:focus, input[type="submit"]:focus {
+	outline: none;
+}
+
+.alert {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 15px;
+	margin-top: 20px;
+	border-radius: 10px;
+	font-size: 14px;
+	font-weight: 500;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	transition: all 0.5s ease;
+	opacity: 0;
+	transform: translateY(-10px);
+}
+
+.alert.show {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.alert.error {
+	background-color: #f9d6d5;
+	color: #7b1212;
+	border-left: 5px solid #bb1e1e;
+}
+
+.custom-swal-popup {
+	font-family: 'Red Hat Display', sans-serif;
+	border-radius: 12px;
+	padding: 20px;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+	max-width: 400px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #fff;
+}
+
+/* Checkbox-Ausrichtung */
+input[type="checkbox"] {
+	transform: scale(1.1);
+	margin-right: 6px;
+}
+
+/* Media Queries für Mobilgeräte */
+@media ( max-width : 768px) {
+	.container {
+		width: 95%;
+	}
+	h1 {
+		font-size: 22px;
+	}
+	input, select, textarea, input[type="submit"], .backbutton {
+		font-size: 16px;
+	}
+}
+
+@media ( max-width : 480px) {
+	.container {
+		width: 100%;
+		padding: 15px;
+	}
+	h1 {
+		font-size: 18px;
+	}
+	input, select, textarea, input[type="submit"], .backbutton {
+		font-size: 14px;
+	}
+}
+
+.checkbox-inline {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-top: 28px;
+}
+
+.checkbox-inline input[type="checkbox"] {
+	transform: scale(1.1);
+	margin: 0;
+}
+
+.checkbox-row {
+	display: flex;
+	justify-content: space-between;
+}

@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'Red Hat Display', sans-serif;
+	background-color: #f4f7fb;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	margin-top: 40px;
+	text-align: center;
+}
+
+header h1 {
+	font-family: 'LimeLight', sans-serif;
+	font-size: 2.5em;
+	color: #3e4b61;
+	margin-bottom: 10px;
+}
+
+header p {
+	font-size: 1.2em;
+	font-style: italic;
+	color: #666;
+	margin-top: 0;
+}
+
+.container {
+	width: 90%;
+	max-width: 1000px;
+	margin: 50px auto;
+	background: white;
+	padding: 30px;
+	border-radius: 12px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	font-size: 1em;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: white;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+}
+
+th, td {
+	padding: 15px;
+	text-align: left;
+	border-bottom: 1px solid #eee;
+}
+
+th {
+	background-color: #33cccc;
+	color: white;
+	font-weight: bold;
+}
+
+td {
+	vertical-align: middle;
+}
+
+tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+tr:hover {
+	background-color: #f1f1f1;
+	transition: background-color 0.2s ease;
+}
+
+td:nth-child(5) {
+	color: #33cccc;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.backbutton {
+	display: inline-block;
+	margin: 20px 10px 0;
+	background-color: transparent;
+	border: 2px solid #33cccc;
+	color: #33cccc;
+	padding: 10px 20px;
+	border-radius: 6px;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 1em;
+	transition: all 0.3s ease;
+}
+
+.backbutton:hover {
+	background-color: #33cccc;
+	color: white;
+}
+
+.info {
+	text-align: center;
+	font-style: italic;
+	color: #888;
+	font-size: 1.1em;
+	margin-top: 30px;
+}
+
+@media ( max-width : 768px) {
+	.container {
+		width: 95%;
+		padding: 20px;
+	}
+	header h1 {
+		font-size: 2em;
+	}
+	th, td {
+		padding: 10px;
+		font-size: 0.95em;
+	}
+}
+
+@media ( max-width : 480px) {
+	th, td {
+		font-size: 0.9em;
+	}
+}
+
+/* .prio-cell {
+	vertical-align: middle;
+}
+
+.prio-kreis {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 5px;
+	vertical-align: middle;
+} */

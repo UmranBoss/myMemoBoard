@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'Red Hat Display', sans-serif;
+	text-align: center;
+	background-color: #f0f0f0;
+	color: #333;
+	margin: 0;
+	height: 100%;
+}
+
+html {
+	height: 100%;
+}
+
+.page-wrapper {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Der Content-Bereich nimmt so viel Platz wie möglich ein */
+body>main {
+	flex: 1;
+}
+
+header {
+	padding-top: 40px;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+header h1 {
+	font-family: 'LimeLight', sans-serif;
+	font-size: 2.5em;
+}
+
+header p {
+	font-size: 1.2em;
+	font-weight: lighter;
+	font-style: italic;
+	margin: 0;
+}
+
+.container {
+	width: 90%;
+	max-width: 900px;
+	margin: 50px auto;
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	margin-top: 10px;
+	text-align: left;
+}
+
+.form-row {
+	display: flex;
+	justify-content: space-between;
+	gap: 15px;
+	margin-bottom: 20px;
+	align-items: flex-start;
+}
+
+.form-row div {
+	flex: 1;
+}
+
+.form-row input, .form-row select {
+	width: 100%;
+	padding: 8px;
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+
+textarea {
+	width: 100%;
+	padding: 10px;
+	margin-top: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	font-size: 14px;
+	box-sizing: border-box;
+	height: 200px;
+	resize: vertical;
+}
+
+input[type="submit"], .backbutton {
+	width: 100%;
+	padding: 10px;
+	background-color: #33cccc;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1em;
+}
+
+input[type="submit"]:hover, .backbutton:hover {
+	background-color: #6fdcdc;
+}
+
+.backbutton {
+	text-decoration: none;
+	color: black;
+	margin-top: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 5px 10px;
+	background-color: transparent;
+	transition: background-color 0.3s ease;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+}
+
+.alert {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 15px;
+	margin-top: 20px;
+	border-radius: 10px;
+	font-size: 14px;
+	font-weight: 500;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	transition: all 0.5s ease;
+	opacity: 0;
+	transform: translateY(-10px);
+}
+
+.alert.show {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.alert.error {
+	background-color: #f9d6d5;
+	color: #7b1212;
+	border-left: 5px solid #bb1e1e;
+}
+
+.backbutton {
+	font-family: 'Red Hat Display', sans-serif;
+}
+
+/* Media Queries */
+@media ( max-width : 768px) {
+	.container {
+		width: 95%;
+	}
+	h1 {
+		font-size: 20px;
+	}
+	input, select, textarea, input[type="submit"] {
+		font-size: 16px;
+	}
+}
+
+@media ( max-width : 480px) {
+	.container {
+		width: 100%;
+	}
+	input, select, textarea, input[type="submit"] {
+		font-size: 14px;
+	}
+	h1 {
+		font-size: 18px;
+	}
+}
+
+/* SweetAlert2 – Custom Button und Popup Design */
+.custom-swal-popup {
+	font-family: 'Red Hat Display', sans-serif;
+	border-radius: 12px;
+	padding: 20px;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+	max-width: 400px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #fff;
+}

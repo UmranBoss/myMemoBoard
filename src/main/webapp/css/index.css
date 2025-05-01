@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'Red Hat Display', sans-serif;
+	margin: 0;
+	background-color: #f0f0f0;
+	color: #333;
+	text-align: center;
+}
+
+html, body {
+	/* HTML & Body nehmen die volle Größe an */
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.page-wrapper {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Der Content-Bereich nimmt so viel Platz wie möglich ein */
+body>main {
+	flex: 1;
+}
+
+header {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+header h1 {
+	font-family: 'LimeLight', sans-serif;
+	font-size: 2.5em;
+}
+
+header p {
+	font-family: 'Red Hat Display', sans-serif;
+	font-size: 1.2em;
+	font-weight: lighter;
+	font-style: italic;
+	margin: 0;
+	font-weight: lighter;
+}
+
+.kachel-container {
+	display: grid;
+	grid-template-columns: repeat(3, 180px);
+	gap: 20px;
+	justify-content: center;
+	margin-bottom: 60px;
+}
+
+.kachel {
+	background-color: white;
+	border-radius: 10px;
+	text-decoration: none;
+	color: white;
+	overflow: hidden;
+	position: relative;
+	height: 180px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.8s ease-in-out;
+	perspective: 1000px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-inner {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.kachel.flipped .card-inner {
+	transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.card-back {
+	background-color: rgba(0, 0, 0, 0.85);
+	color: white;
+	transform: rotateY(180deg);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.card-back h2 {
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 8px;
+	font-family: 'Red Hat Display', sans-serif;
+	color: #ffffff;
+}
+
+.card-back p {
+	font-family: 'Red Hat Display', sans-serif;
+	font-size: 14px;
+	line-height: 1.4;
+	font-weight: 300;
+	color: #cccccc;
+	margin: 0;
+	padding: 0 8px;
+}
+
+.gif-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.gif-wrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: opacity 0.3s ease;
+	transform: scale(0.7);
+}
+
+.static {
+	opacity: 1;
+	z-index: 1;
+}
+
+.animated {
+	opacity: 0;
+	z-index: 2;
+}
+
+.kachel:hover .static {
+	opacity: 0;
+}
+
+.kachel:hover .animated {
+	opacity: 1;
+}

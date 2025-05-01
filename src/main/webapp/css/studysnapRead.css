@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'Red Hat Display', sans-serif;
+	text-align: center;
+	background-color: #f0f0f0;
+	color: #333;
+	margin: 0;
+	height: 100%;
+}
+
+html {
+	height: 100%;
+}
+
+.page-wrapper {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Der Content-Bereich nimmt so viel Platz wie möglich ein */
+body>main {
+	flex: 1;
+}
+
+header {
+	padding-top: 40px;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+header h1 {
+	font-family: 'LimeLight', sans-serif;
+	font-size: 2.5em;
+}
+
+header p {
+	font-size: 1.2em;
+	font-weight: lighter;
+	font-style: italic;
+	margin: 0;
+}
+
+.container {
+	width: 90%;
+	max-width: 900px;
+	margin: 50px auto;
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	margin-top: 10px;
+	text-align: left;
+}
+
+.filter-form {
+	display: flex;
+	flex-wrap: nowrap; /* kein Zeilenumbruch */
+	gap: 10px;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.filter-form label {
+	text-align: left;
+	margin: 2px;
+}
+
+.filter-form input, .filter-form select, .filter-form button {
+	flex-grow: 1;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+.filter-form input[type="text"] {
+	max-width: 200px;
+}
+
+.filter-form button {
+	flex-grow: 0;
+	width: auto;
+	background-color: #33cccc;
+	color: white;
+	cursor: pointer;
+	background-color: #33cccc;
+}
+
+.filter-form button:hover {
+	background-color: #28a8a8;
+}
+
+.filter-form button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #33cccc;
+	border: none;
+	padding: 12px 16px;
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 20px;
+	width: 50px;
+	height: 50px;
+	transition: background-color 0.3s, box-shadow 0.3s ease;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-form button:hover {
+	background-color: #28a8a8;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.filter-form button i {
+	font-size: 20px;
+}
+
+a.resetbutton {
+	text-decoration: none;
+}
+
+.backbutton {
+	text-decoration: none;
+	color: black;
+	margin-top: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 5px 10px;
+	background-color: transparent;
+	transition: background-color 0.3s ease;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	height: 48px;
+}
+
+.backbutton:hover {
+	background-color: #33cccc;
+	border-radius: 5px;
+}
+
+input::placeholder {
+	font-family: 'Red Hat Display', sans-serif;
+}
+
+select, option {
+	font-family: 'Red Hat Display', sans-serif;
+}
+
+.backbutton, .filter-form button, .reset-button {
+	font-family: 'Red Hat Display', sans-serif;
+}
+
+@media ( max-width : 768px) {
+	.container {
+		width: 95%;
+	}
+	h1 {
+		font-size: 20px;
+	}
+	input, select, textarea, input[type="submit"] {
+		font-size: 16px;
+	}
+}
+
+@media ( max-width : 480px) {
+	.container {
+		width: 100%;
+	}
+	input, select, textarea, input[type="submit"] {
+		font-size: 14px;
+	}
+	h1 {
+		font-size: 18px;
+	}
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	font-family: 'Red Hat Display', sans-serif;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+	background-color: white;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+table th, table td {
+	padding: 12px 15px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+table td {
+	vertical-align: top;
+	text-align: left;
+}
+
+table td:nth-child(4) {
+	text-align: justify;
+}
+
+table th {
+	background-color: #33cccc;
+	color: white;
+	font-weight: bold;
+}
+
+table tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+table tr:hover {
+	background-color: #f1f1f1;
+	transition: background-color 0.3s ease;
+}
+
+.custom-swal-popup {
+	font-family: 'Red Hat Display', sans-serif;
+	border-radius: 12px;
+	padding: 20px;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.custom-swal-button {
+	background-color: #fd6050 !important;
+	color: white !important;
+	font-family: 'Red Hat Display', sans-serif;
+	border: none;
+	border-radius: 5px !important;
+	padding: 10px 20px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease;
+}
+
+.custom-swal-button:hover {
+	background-color: #e45544 !important;
+}
+/* SweetAlert2 – Icon einfärben */
+.custom-swal-icon .swal2-warning {
+	color: #fd6050 !important;
+	border-color: #fd6050 !important;
+}
+
+.custom-swal-icon .swal2-icon-content {
+	color: #fd6050 !important;
+}
+
+.pagination {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.pagination a, .pagination .current-page {
+	display: inline-block;
+	margin: 0 5px;
+	padding: 8px 14px;
+	border-radius: 6px;
+	text-decoration: none;
+	background-color: #f0f0f0;
+	color: #333;
+	font-weight: bold;
+}
+
+.pagination .current-page {
+	background-color: #fd6050;
+	color: white;
+}
+
+/* Farbliche Kreise für Priorität */
+.prio-cell {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.prio-circle {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+}
+
+.circle-rot {
+	background-color: #e63946;
+}
+
+.circle-orange {
+	background-color: #f4a261;
+}
+
+.circle-gruen {
+	background-color: #2a9d8f;
+}
